@@ -1,3 +1,4 @@
+
 const HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin')
 
 // vue.config.js
@@ -9,22 +10,17 @@ module.exports = {
             externals: [
               {
                 module: 'jquery',
-                entry: 'https://unpkg.com/jquery@3.2.1/dist/jquery.min.js'
+                entry: 'https://unpkg.com/jquery@3.2.1/dist/jquery.min.js',
               },
-            ],
-          }),
-          new HtmlWebpackExternalsPlugin({
-            externals: [
               {
-                module: 'materialize-css',
+              module: 'materialize-css',
                 entry:{
                   path: 'https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css',
                   type: 'css'
                 }
-              },
+              }
             ],
           }),
-
     ]
   }
 }
